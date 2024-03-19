@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    networks:
+      - red-taller07
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb:/data/db
+      - mongodb_config:/data/configdb
+    environment:
+      MONGO_INITDB_DATABASE: login
+      MONGO_INITDB_ROOT_USERNAME: daniela 
+      MONGO_INITDB_ROOT_PASSWORD: daniela2004
+
+
+networks:
+  red-taller07:
+    driver: bridge
+
+volumes:
+  mongodb:
+  mongodb_config: 
