@@ -2,8 +2,7 @@ FROM openjdk:17
 
 WORKDIR /usrapp/bin
 
-EXPOSE 80
-
+EXPOSE 5000
 
 COPY /target/classes /usrapp/bin/classes
 COPY /target/dependency /usrapp/bin/dependency

@@ -1,4 +1,4 @@
-function cadenaLog(){
+function login(){
     let inputUserName = document.getElementById("username");
     let inputPassword = document.getElementById("password");
     let endPoint = "/login";
@@ -9,7 +9,7 @@ function cadenaLog(){
     peticion.then(respuesta =>{
         let divResLogin = document.getElementById("resLogin");
         
-        let resp = new Boolean(respuesta);
+        let resp = respuesta === "true";
         divResLogin.innerHTML = (resp)?"Bienvenido 😊 " + inputUserName.value :"Usuario o contraseña incorrectos 😔";
     })
 }
@@ -20,7 +20,7 @@ async function solicitarEndPoint(endPoint, body){
             "Content-Type": "application/json"
         },
         method: "POST",
-        body: body
+        body: JSON.stringify(body)
     })
     .then(respuesta => {
         if(!respuesta.ok){

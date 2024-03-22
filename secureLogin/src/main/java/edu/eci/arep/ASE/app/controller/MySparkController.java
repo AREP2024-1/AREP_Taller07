@@ -1,8 +1,10 @@
 package edu.eci.arep.ASE.app.controller;
 
-import static spark.Spark.get;
+import static spark.Spark.post;
 
 import edu.eci.arep.ASE.app.services.Authentication;
+
+import java.io.IOException;
 
 public class MySparkController implements MyController {
     
@@ -14,9 +16,16 @@ public class MySparkController implements MyController {
 
     @Override
     public void inicializar() {
-        get("/login", (req, res)->{
-            String body = req.body();
-            return authentication.isAuthenticated(body);
+        post("/login", (req, res)->{
+            try{
+                String body = req.body();
+                return authentication.isAuthenticated(body);
+            }catch(IOException e){
+                e.printStackTrace();
+                return "500 server error";
+
+            }
+            
         });
     }
 

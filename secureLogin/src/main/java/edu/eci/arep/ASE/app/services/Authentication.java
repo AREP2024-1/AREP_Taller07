@@ -1,8 +1,10 @@
 package edu.eci.arep.ASE.app.services;
 
 import edu.eci.arep.ASE.app.domain.Login;
+
+import java.io.IOException;
+
 import edu.eci.arep.ASE.app.apiExternal.HttpClient;
-import edu.eci.arep.ASE.app.services.DataTransformation;
 
 
 public class Authentication {
@@ -21,7 +23,7 @@ public class Authentication {
         return this.httpClient.call(this.url, login).equals("true");
     }
 
-    public boolean isAuthenticated(String login) {
+    public boolean isAuthenticated(String login) throws IOException{
         return this.isAuthenticated(dataTransformation.stringToLogin(login));
     }
     

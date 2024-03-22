@@ -2,6 +2,7 @@ package edu.eci.arep.ASE.app.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+
 public class Login {
 
     @JsonProperty("username")
@@ -16,5 +17,14 @@ public class Login {
         this.username = username;
         this.password = password;
     }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
     
 }

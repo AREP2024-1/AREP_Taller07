@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+        <script src="./index.js"></script>
     </head>
     <body>
         <h1>Login</h1>
@@ -12,8 +13,8 @@
             <label for="username">Usuario: </label>
             <input type="text" id="username" name="username"><br><br>
             <label for="password">Contrasena: </label>
-            <input type="text" id="password" name="password"><br><br>
-            <input type="submit" value="Iniciar sesion">
+            <input type="password" id="password" name="password"><br><br>
+            <input type="button" value="Iniciar sesion" onclick="login()">
         </form>
         <div id="resLogin"></div>
     </body>
