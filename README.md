@@ -139,7 +139,7 @@ docker run -d --name ubuntu ubuntu tail -f /dev/null
 ```
 docker network ls
 ```
-![](images/redDocker.jpg)
+![](images/redDocker.JPG)
 
 **Nota:** Como podemos observar en la imagen nuestra red se llama **arep_taller07_red-taller07**
 
@@ -178,10 +178,12 @@ curl --location 'http://server:5000/user' \
 ```
 
 **Nota:** El curl anterior se hizo con ayuda de postman.
-![](images/postman.jpg)
+
+![](images/postman.JPG)
 
 En la siguiente imagen, podemos ver el resultado de ejecutar el curl en el Docker Dekstop:
-![](images/curlUbuntu.jpg)
+
+![](images/curlUbuntu.JPG)
 
 **Nota:** Si el usuario se creó correctamente se mostrará un mensaje de Usuario creado exitosamente como se puede observar en la imagen anterior, de lo contrario se envía el mensaje de Usuario no creado.
 
@@ -195,11 +197,11 @@ Allí vamos a acceder con las credenciales del usuario que agregamos anteriormen
 
 Si las credenciales ingresadas son correctas se mostrará un mensaje de bienvenida como se puede observar en la imagen:
 
-![](images/loginCorrecto.jpg)
+![](images/loginCorrecto.JPG)
 
 Si por el contrario no son correctas, se mostrará un mensaje de usuario o contraseña incorrectos como se visualiza en la siguiente imagen:
 
-![](images/loginIncorrecto.jpg)
+![](images/loginIncorrecto.JPG)
 
 
 7.También podemos observar los usuarios que han sido agregados a nuestra base de datos, para esto 
@@ -208,7 +210,7 @@ a.	Ejecutamos el siguiente comando en el contenedor mongodb desde Docker Dekstop
 ```
 mongosh mongodb://daniela:daniela2004@mongodb:27017
 ```
-![](images/mongoConnection.jpg)
+![](images/mongoConnection.JPG)
 
 b.	Luego vamos a acceder a la base de datos con el nombre, utilizando el siguiente comando:
 ```
@@ -222,7 +224,7 @@ db.login.find()
 
 Como podemos observar en la siguiente imagen tenemos dos usuarios agregados con su respectivo username y contraseña encriptada.
 
-![](images/usuariosMongo.jpg)
+![](images/usuariosMongo.JPG)
 
 ---
 ### Ejecución de Test
