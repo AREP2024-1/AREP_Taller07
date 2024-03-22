@@ -21,7 +21,6 @@ public class MySparkController implements MyController {
                 String body = req.body();
                 return authentication.isAuthenticated(body);
             }catch(IOException e){
-                e.printStackTrace();
                 return "500 server error";
 
             }

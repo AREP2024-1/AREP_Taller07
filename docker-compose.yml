@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    networks:
+      - red-taller07
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb:/data/db
+      - mongodb_config:/data/configdb
+    environment:
+      MONGO_INITDB_DATABASE: login
+      MONGO_INITDB_ROOT_USERNAME: daniela 
+      MONGO_INITDB_ROOT_PASSWORD: daniela2004
+  
+  login:
+    image: danielaladino/docker-login
+    container_name: login
+    networks:
+      - red-taller07
+    ports:
+      - 8080:8080
+    depends_on:
+      - mongodb
+      - server
+  
+  server:
+    image: danielaladino/docker-server
+    container_name: server
+    networks:
+      - red-taller07
+    depends_on:
+      - mongodb
+
+networks:
+  red-taller07:
+    driver: bridge
+
+volumes:
+  mongodb:
+  mongodb_config:

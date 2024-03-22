@@ -26,11 +26,9 @@ public class MySparkController implements MyController {
                 ObjectMapper mapper = new ObjectMapper();
                 Login readMapper = mapper.readValue(body, Login.class);
                 return authentication.isAuthenticated(readMapper);
-                
             }catch(Exception e){
                 return false;
             }
-
         });
 
         post("/user", (req, res)->{
@@ -41,10 +39,8 @@ public class MySparkController implements MyController {
                 saveUser.save(readMapper);
                 return "El usuario se ha creado con exito";
             }catch(Exception e){
-                e.printStackTrace();
                 return "Usuario no creado";
             }
-
         });
     }
 

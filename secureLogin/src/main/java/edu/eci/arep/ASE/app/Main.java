@@ -23,7 +23,7 @@ public class Main {
     }
     
     public static void controller(){
-        Authentication authentication = new Authentication("http://localhost:5000/login", new HttpClient());
+        Authentication authentication = new Authentication("http://server:5000/login", new HttpClient());
         MyController myController = new MySparkController(authentication);
         myController.inicializar();
     }
