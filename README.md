@@ -2,7 +2,7 @@
 
 Se creo una aplicación web usando el micro-framework de Spark java (http://sparkjava.com/). La cual fue desplegada en AWS utilizando EC2 y Docker.
 
-Esta aplicación Web segura permitE un acceso seguro desde el browser a la aplicación así como entre servicios. Es decir, garantiza autenticación, autorización e integridad de usuarios y servicios.
+Esta aplicación Web segura permite un acceso seguro desde el browser a la aplicación así como entre servicios. Es decir, garantiza autenticación, autorización e integridad de usuarios y servicios.
 
 
 ---
@@ -264,7 +264,7 @@ mvn test
 En el siguiente link encontrara el video donde se evidencia el despliegue en AWS:
 
 ```
-
+https://youtu.be/ljq1ra-ALWw
 ```
 
 ---
